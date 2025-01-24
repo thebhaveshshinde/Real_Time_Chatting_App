@@ -30,7 +30,8 @@ function Chat() {
       <div className="bg-slate-600 h-screen w-screen">
         <div className="bg-cyan-300 fixed z-30 w-screen p-2 ">
           Enter Your Name : <input type="text" className="border-2 font-bold border-brown-700 w-2/4" value={username} onChange={(e) => setusername(e.target.value)} required /><br />
-        </div><br />
+        </div><br /> 
+        {/* Takes user name */}
 
 
         <div className="flex z-10 absolute overflow-x-auto  bottom-30 top-15  left-2 flex-col">
@@ -48,7 +49,7 @@ function Chat() {
             (
               <div className="flex justify-center items-center text-center h-screen w-screen">
                 <h1 className="text-2xl font-bold">Enter Your Name and Begin Chatting!</h1>
-              </div>
+              </div> 
             )}
 
         </div><br />
