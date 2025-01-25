@@ -7,14 +7,11 @@ const app = express()
 
 
 const server = http.createServer(app)
-const io = new Server(server,{
-    cors:{
-        origin:"https://real-time-chatting-app-mu.vercel.app",
-        method:["GET","POST"],
-    }
-})
+const io = new Server(server)
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://real-time-chatting-app-mu.vercel.app',
+  }));
 
 app.get("/",(req,res)=>{
     res.send("<HTML><HEAD></HEAD><BODY><H1>Hello!</H1></BODY></HTML>")
