@@ -38,8 +38,8 @@ io.on("connection", (socket) => {
 
 })
 
-server.listen(4000, () => {
-    console.log("Server Running On The Port 4000 ...")
-})
+// server.listen(4000, () => {
+//     console.log("Server Running On The Port 4000 ...")
+// })
 
-// module.exports = server
+module.exports = server
