@@ -9,7 +9,7 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: "https://real-time-chatting-app-mu.vercel.app",
+        origin: "*",
         method: ["GET", "POST"],
     },
     transports:['polling','websocket'],
@@ -17,7 +17,7 @@ const io = new Server(server, {
 
 
 app.use(cors({
-    origin: 'https://real-time-chatting-app-mu.vercel.app',
+    origin: '*',
 }));
 app.use(express.json());
 
@@ -40,8 +40,8 @@ io.on("connection", (socket) => {
 
 })
 
-// server.listen(4000, () => {
-//     console.log("Server Running On The Port 4000 ...")
-// })
+server.listen(4000, () => {
+    console.log("Server Running On The Port 4000 ...")
+})
 
-module.exports = server
+module.exports = app
