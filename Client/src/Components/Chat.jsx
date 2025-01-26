@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { io } from "socket.io-client"
-const socket = io("https://real-time-chat-app-back.vercel.app/api",{
-  transports: ['websocket','polling'],
+const socket = io("https://real-time-chat-app-back.vercel.app",{
+  transports: ['polling'],
 });
 
 
