@@ -11,13 +11,15 @@ const io = new Server(server, {
     cors: {
         origin: "https://real-time-chatting-app-mu.vercel.app",
         method: ["GET", "POST"],
-    }
+    },
+    transports:['polling'],
 })
 
 
 app.use(cors({
     origin: 'https://real-time-chatting-app-mu.vercel.app',
 }));
+app.use(express.json());
 
 app.get("/", (req, res) => {
     res.send("<HTML><HEAD></HEAD><BODY><H1>Hello!</H1></BODY></HTML>")
