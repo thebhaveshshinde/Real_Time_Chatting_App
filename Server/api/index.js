@@ -12,7 +12,7 @@ const io = new Server(server, {
         origin: "*",
         method: ["GET", "POST"],
     },
-    transports:['polling','websocket'],
+    transports:['websocket'],
 })
 
 
